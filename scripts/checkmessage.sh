@@ -12,6 +12,7 @@ commit_message_check (){
       git log $currentbranch --pretty=format:"%H" > shafile.txt
 
       cat shafile.txt
+      
 
       # loops through the file an gets the message
       for i in `cat ./shafile.txt`;
