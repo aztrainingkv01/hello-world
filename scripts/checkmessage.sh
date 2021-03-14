@@ -17,6 +17,8 @@ commit_message_check (){
       # gets the git commit message based on the sha
       gitmessage=`git log --format=%B -n 1 "$i"`
 
+      echo "gitmessage -> $gitmessage"
+
       ####################### TEST STRINGS comment out line 13 to use #########################################
       #gitmessage="feat sdasdsadsaas (AEROGEAR-asdsada)"
       #gitmessage="feat(some txt): some txt (AEROGEAR-****)"
