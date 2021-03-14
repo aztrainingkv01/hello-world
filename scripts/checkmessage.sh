@@ -9,7 +9,9 @@ commit_message_check (){
       echo "currentbranch -> $currentbranch"
 
       # Gets the commits for the current branch and outputs to file
-      git log $currentbranch --pretty=format:"%H" --not main > shafile.txt
+      git log $currentbranch --pretty=format:"%H" > shafile.txt
+
+      cat shafile.txt
 
       # loops through the file an gets the message
       for i in `cat ./shafile.txt`;
